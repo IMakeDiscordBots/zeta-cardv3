@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #333333;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 150px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  background-image: url(https://cdn.glitch.me/78ac8d0e-32ff-473d-94c0-8070c509f5ed/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg?v=1641064021982);
+  background-size: cover;
+  max-width: 30ch;
+  min-width: 25ch;
+  border-radius: 10px;
+  color: #ffffff;
+  height: 375px;
+  width: 500px;
+  align-items: center;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-container {
+  height: 350px;
+  width: 285px;
+  overflow: hidden;
+  transform: translateY(50%);
+  transform-origin: top-left;
+  transition: ease-in-out 0.4s;
+  transition-delay: 500ms;
+  background: linear-gradient(180deg, transparent, #333333);
+  background-size: 100%;
+}
+
+.container:hover .inner-container {
+  transform: translateY(10%);
+  transition: ease-in-out 0.4s;
+  transition-delay: 500ms;
+}
+
+.card-title {
+  position: relative;
+  padding-left: 20px;
+  padding-top: 135px;
+}
+
+.card-title::after {
+  content: "";
+  height: 5px;
+  width: 185px;
+  background: #ee6352;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: ease-in-out 1s;
+}
+
+.container:hover .card-title::after {
+  transform: scalex(1);
+  transform-origin: left;
+}
+
+.text {
+  padding-left: 20px;
+}
+
+.button-container {
+  padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-size: 20px;
+  background: tomato;
+  width: 165px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: bold;
+  transition: ease-in-out 0.2s;
+}
+
+.button:hover {
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
 }
