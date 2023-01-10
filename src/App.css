@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 75px;
+  padding-top: 50px;
   animation: fadeAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
